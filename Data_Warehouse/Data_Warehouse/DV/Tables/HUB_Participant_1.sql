@@ -1,8 +1,0 @@
-﻿CREATE TABLE [DV].[HUB_Participant] (
-    [ParticipantHash] BINARY (32)    NULL,
-    [ParticipantKey]  NVARCHAR (100) NULL,
-    [RecordSource]    VARCHAR (50)   NULL,
-    [ValidFrom]       DATETIME2 (0)  NULL
-)
-WITH (HEAP, DISTRIBUTION = HASH([ParticipantHash]));
-

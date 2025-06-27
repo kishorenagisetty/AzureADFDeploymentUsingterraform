@@ -1,2 +1,0 @@
-﻿CREATE VIEW [ICONI].[vBICommon_Outcome_Earnings]
-AS SELECT [outcome_earnings_id], [out_earn_entity_id], [out_earn_salary_amount], [out_earn_salary_unit], [out_earn_hours_per_week], [out_earn_date_from], [out_earn_date_to], [out_earn_notes], [out_earn_updated_by_user_id], [out_earn_updated_date], [out_earn_days_per_week], [ValidFrom], [ValidTo], CAST(1 AS BIT) AS IsCurrent FROM DELTA.ICONI_vBICommon_Outcome_Earnings 

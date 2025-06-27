@@ -1,2 +1,0 @@
-﻿CREATE VIEW [ICONI].[vBICommon_Criteria_Result]
-AS SELECT [criteria_result_id], [cr_criteria_definition_id], [cr_entity_id], [cr_added_date], [cr_entity_type], [cr_type], [cr_status], [ValidFrom], [ValidTo], CAST(1 AS BIT) AS IsCurrent FROM DELTA.ICONI_vBICommon_Criteria_Result;

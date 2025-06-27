@@ -1,2 +1,0 @@
-﻿CREATE VIEW [ICONI].[vBICommon_Criteria_Override]
-AS SELECT [criteria_override_id], [co_criteria_definition_id], [co_entity_id], [co_entity_type], [co_reason], [co_added_by_user_id], [co_active_to_date], [co_added_date], [ValidFrom], [ValidTo], CAST(1 AS BIT) AS IsCurrent FROM DELTA.ICONI_vBICommon_Criteria_Override;

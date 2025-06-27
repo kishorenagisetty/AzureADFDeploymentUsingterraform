@@ -1,2 +1,0 @@
-﻿CREATE VIEW [ICONI].[vBIRestart_GroupSessionSessionAttendance]
-AS SELECT [group_session_session_attendance_id], [gsa_group_session_session_id], [gsa_group_session_registration_id], [gsa_session_title], [gsa_outcome], [gsa_trainer_notes], [gsa_gss_date], [gsa_gss_attendance_notes], [ValidFrom], [ValidTo], CAST(1 AS BIT) AS IsCurrent FROM DELTA.ICONI_vBIRestart_GroupSessionSessionAttendance;

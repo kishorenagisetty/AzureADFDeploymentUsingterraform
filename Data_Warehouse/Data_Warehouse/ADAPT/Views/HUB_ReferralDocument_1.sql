@@ -1,5 +1,0 @@
-﻿CREATE VIEW [ADAPT].[HUB_ReferralDocument]
-AS SELECT CONCAT_WS('|','ADAPT',CAST(DT.REFERENCE AS INT)) AS ReferralDocumentKey,
-'ADAPT.DOCTRACK_GEN_DT' AS RecordSource,
-ValidFrom, ValidTo, IsCurrent
-FROM ADAPT.PROP_DOCTRACK_GEN DT;

@@ -1,2 +1,0 @@
-﻿CREATE VIEW [ADAPT].[RemployCreated_ProgrammeWorkStatusAudit]
-AS SELECT [Audit_ID], [Programme_ID], [AuditDateTime], [WorkStatus], [ValidFrom], [ValidTo], CAST(1 AS BIT) AS IsCurrent FROM DELTA.ADAPT_RemployCreated_ProgrammeWorkStatusAudit;

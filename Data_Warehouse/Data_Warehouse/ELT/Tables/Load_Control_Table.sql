@@ -1,6 +1,0 @@
-﻿CREATE TABLE [ELT].[Load_Control_Table] (
-    [TableName] VARCHAR (255) NULL,
-    [Load_Date] DATE          NULL
-)
-WITH (CLUSTERED COLUMNSTORE INDEX, DISTRIBUTION = ROUND_ROBIN);
-

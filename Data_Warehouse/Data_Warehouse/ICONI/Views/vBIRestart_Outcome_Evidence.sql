@@ -1,2 +1,0 @@
-﻿CREATE VIEW [ICONI].[vBIRestart_Outcome_Evidence]
-AS SELECT [outcome_evidence_id], [oev_date], [oev_type], [oev_advisor_user_id], [oev_evidence_document_id], [oev_notes], [oev_status], [oev_rejection_reason], [oev_engagement_id], [oev_added_date], [oev_added_by_user_id], [oev_complete_date], [oev_complete_by_user_id], [oev_last_updated_date], [ValidFrom], [ValidTo], CAST(1 AS BIT) AS IsCurrent FROM DELTA.ICONI_vBIRestart_Outcome_Evidence;

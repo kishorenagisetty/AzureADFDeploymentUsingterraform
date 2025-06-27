@@ -1,8 +1,0 @@
-CREATE VIEW [ADAPT].[HUB_Programme]
-AS SELECT 
-TRIM(P.NAME) AS ProgrammeKey,
-'ADAPT.PROP_WP_GEN' AS RecordSource,
-MIN(ValidFrom) AS ValidFrom, MAX(ValidTo) AS ValidTo, CAST(1 AS BIT) AS IsCurrent 
-FROM ADAPT.PROP_WP_GEN P
-WHERE NULLIF(NAME,'') IS NOT NULL and IsCurrent = 1
-GROUP BY TRIM(P.NAME);

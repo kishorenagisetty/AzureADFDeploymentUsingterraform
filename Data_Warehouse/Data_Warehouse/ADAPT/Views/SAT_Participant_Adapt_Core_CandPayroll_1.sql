@@ -1,9 +1,0 @@
-﻿CREATE VIEW [ADAPT].[SAT_Participant_Adapt_Core_CandPayroll]
-AS SELECT 
-	CONCAT_WS('|','ADAPT',CAST(PG.PERSON_ID AS INT)) AS ParticipantKey,
-	CP.NI_NUMBER AS NationalInsuranceNo,
-	CP.ValidFrom,
-	CP.ValidTo,
-	CP.IsCurrent
-	FROM ADAPT.PROP_CAND_PAYROLL CP
-	INNER JOIN ADAPT.PROP_PERSON_GEN PG	ON CP.REFERENCE = PG.REFERENCE and PG.IsCurrent = 1;

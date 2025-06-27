@@ -1,2 +1,0 @@
-﻿CREATE VIEW [ICONI].[vBIRestart_UserAvailability]
-AS SELECT [user_availability_id], [ucs_user_id], [ucs_site_id], [ucs_type], [ucs_sub_type], [ucs_day], [ucs_date], [ucs_start_time], [ucs_end_time], [ucs_week_status], [ucs_added_date], [ucs_last_updated_date], [ValidFrom], [ValidTo], CAST(1 AS BIT) AS IsCurrent FROM DELTA.ICONI_vBIRestart_UserAvailability;

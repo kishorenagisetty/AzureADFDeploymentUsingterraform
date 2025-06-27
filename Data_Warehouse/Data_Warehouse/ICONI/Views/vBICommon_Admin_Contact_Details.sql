@@ -1,2 +1,0 @@
-﻿CREATE VIEW [ICONI].[vBICommon_Admin_Contact_Details]
-AS SELECT [admin_contact_details_id], [acd_entity_id], [acd_type], [acd_address_1], [acd_address_2], [acd_address_3], [acd_town], [acd_postcode], [acd_tel_no], [acd_mob_no], [acd_fax_no], [acd_email], [acd_web_address], [acd_added_by_user_id], [acd_added_date], [acd_archive], [ValidFrom], [ValidTo], CAST(1 AS BIT) AS IsCurrent FROM DELTA.ICONI_vBICommon_Admin_Contact_Details;

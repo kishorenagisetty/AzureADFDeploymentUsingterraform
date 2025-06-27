@@ -1,8 +1,0 @@
-﻿CREATE TABLE [ELT].[ImportAASRefreshStatus] (
-    [Id]          INT            IDENTITY (1, 1) NOT NULL,
-    [JSONDATA]    VARCHAR (8000) NULL,
-    [CreatedDate] DATETIME       NOT NULL,
-    [Status]      VARCHAR (25)   NOT NULL
-)
-WITH (CLUSTERED COLUMNSTORE INDEX, DISTRIBUTION = ROUND_ROBIN);
-

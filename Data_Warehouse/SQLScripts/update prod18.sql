@@ -1,2 +1,0 @@
-update [ELT].[ASLogicAppNames]
-  set [ASLogicAPPName] =  'https://prod-12.uksouth.logic.azure.com:443/workflows/d44ed60d3fd54888b22dc8fb10e391e3/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=kBJgn5vhlSwGC3yVJIW2z2o5SKE5Ux3Dk-v_Uw5rZLo'

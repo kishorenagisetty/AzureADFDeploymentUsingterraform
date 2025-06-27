@@ -1,7 +1,0 @@
-﻿CREATE VIEW [ADAPT].[HUB_Submission] AS SELECT 
-CONCAT_WS('|', 'ADAPT', CAST(C.SHORTLIST AS INT))	AS SubmissionKey,
-'ADAPT.PROP_X_SHORT_CAND'							AS RecordSource,
-C.ValidFrom,
-C.ValidTo,
-C.IsCurrent
-FROM	ADAPT.PROP_X_SHORT_CAND C;

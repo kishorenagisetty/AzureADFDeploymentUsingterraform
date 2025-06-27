@@ -1,2 +1,0 @@
-﻿CREATE VIEW [ICONI].[vBICommon_Document]
-AS SELECT [document_id], [rf_filename], [rf_version], [rf_entity_id], [rf_entity_type], [rf_type], [rf_notes], [rf_added_date], [rf_added_by_user_id], [ValidFrom], [ValidTo], CAST(1 AS BIT) AS IsCurrent FROM DELTA.ICONI_vBICommon_Document;

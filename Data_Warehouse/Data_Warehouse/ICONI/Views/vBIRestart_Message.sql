@@ -1,2 +1,0 @@
-﻿CREATE VIEW [ICONI].[vBIRestart_Message]
-AS SELECT [message_id], [msg_destination], [msg_from], [msg_communication_type], [msg_type], [msg_subject], [msg_related_entity_id], [msg_content], [msg_delivery_status], [msg_sent_date], [msg_added_by_user_id], [msg_added_by_display], [msg_added_date], [msg_last_updated_date], [ValidFrom], [ValidTo], CAST(1 AS BIT) AS IsCurrent FROM DELTA.ICONI_vBIRestart_Message 

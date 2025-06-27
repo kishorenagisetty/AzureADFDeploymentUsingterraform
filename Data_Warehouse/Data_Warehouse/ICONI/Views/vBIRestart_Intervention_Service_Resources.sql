@@ -1,2 +1,0 @@
-﻿CREATE VIEW [ICONI].[vBIRestart_Intervention_Service_Resources]
-AS SELECT [intervention_service_resource_id], [iscr_intervention_service_id], [iscr_resource_id], [iscr_added], [iscr_resource_title], [iscr_status], [ValidFrom], [ValidTo], CAST(1 AS BIT) AS IsCurrent FROM DELTA.ICONI_vBIRestart_Intervention_Service_Resources;

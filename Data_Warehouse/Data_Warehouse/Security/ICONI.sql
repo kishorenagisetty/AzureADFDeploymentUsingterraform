@@ -1,3 +1,0 @@
-﻿CREATE SCHEMA [ICONI]
-    AUTHORIZATION [dbo];
-

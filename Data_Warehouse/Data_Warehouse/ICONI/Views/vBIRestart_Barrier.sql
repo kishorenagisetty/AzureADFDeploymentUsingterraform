@@ -1,2 +1,0 @@
-﻿CREATE VIEW [ICONI].[vBIRestart_Barrier]
-AS SELECT [engagement_barrier_id], [eb_engagement_id], [eb_barrier], [eb_value], [eb_status], [eb_notes], [eb_added_date], [eb_last_updated_date], [ValidFrom], [ValidTo], CAST(1 AS BIT) AS IsCurrent FROM DELTA.ICONI_vBIRestart_Barrier 

@@ -1,2 +1,0 @@
-﻿CREATE VIEW [ICONI].[vBIRestart_Payment]
-AS SELECT [payment_id], [pay_engagement_id], [pay_agency_id], [pay_site_id], [pay_project], [pay_related_entity_id], [pay_date], [pay_bat_id], [pay_amount], [pay_provider_bat_id], [pay_provider_amount], [pay_received_date], [pay_finance_ref_number], [pay_dwp_payment_level], [pay_performance_level], [pay_notes], [pay_type], [pay_category], [pay_status], [pay_added_date], [ValidFrom], [ValidTo], CAST(1 AS BIT) AS IsCurrent FROM DELTA.ICONI_vBIRestart_Payment;

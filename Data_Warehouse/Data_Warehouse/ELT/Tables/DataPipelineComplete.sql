@@ -1,5 +1,0 @@
-﻿CREATE TABLE [ELT].[DataPipelineComplete] (
-    [DataLoadCompleteDate] DATETIME NULL
-)
-WITH (CLUSTERED COLUMNSTORE INDEX, DISTRIBUTION = ROUND_ROBIN);
-

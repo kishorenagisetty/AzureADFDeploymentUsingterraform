@@ -1,9 +1,0 @@
-﻿CREATE SCHEMA [OLD]
-    AUTHORIZATION [dbo];
-
-
-
-
-
-
-

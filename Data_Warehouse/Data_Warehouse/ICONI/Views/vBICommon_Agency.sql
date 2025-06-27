@@ -1,2 +1,0 @@
-﻿CREATE VIEW [ICONI].[vBICommon_Agency]
-AS SELECT [agency_id], [agency_admin_contact_details_id], [agency_name], [agency_short_name], [agency_provide_service], [agency_added_date], [agency_notes], [agency_type], [agency_last_updated_date], [ValidFrom], [ValidTo], CAST(1 AS BIT) AS IsCurrent FROM DELTA.ICONI_vBICommon_Agency;

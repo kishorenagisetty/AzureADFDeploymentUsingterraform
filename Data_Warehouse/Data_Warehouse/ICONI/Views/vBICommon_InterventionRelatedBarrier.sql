@@ -1,2 +1,0 @@
-﻿CREATE VIEW [ICONI].[vBICommon_InterventionRelatedBarrier]
-AS SELECT [intervention_related_barrier_id], [rb_entity_id], [rb_entity_type], [rb_barrier_id], [rb_added_by_user_id], [rb_added_date], [ValidFrom], [ValidTo], CAST(1 AS BIT) AS IsCurrent FROM DELTA.ICONI_vBICommon_InterventionRelatedBarrier;

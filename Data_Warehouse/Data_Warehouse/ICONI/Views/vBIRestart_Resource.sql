@@ -1,2 +1,0 @@
-﻿CREATE VIEW [ICONI].[vBIRestart_Resource]
-AS SELECT [resource_id], [res_status], [res_title], [res_description], [res_type], [res_file], [res_review_date], [res_categories], [res_publish_location], [res_added_by_user_id], [res_added_date], [res_last_updated_date], [ValidFrom], [ValidTo], CAST(1 AS BIT) AS IsCurrent FROM DELTA.ICONI_vBIRestart_Resource;

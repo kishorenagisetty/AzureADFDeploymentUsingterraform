@@ -1,2 +1,0 @@
-﻿CREATE VIEW [ICONI].[vBIRestart_Site]
-AS SELECT [site_id], [site_name], [site_type], [site_admin_contact_details_id], [site_agency_id], [site_parent_site_id], [site_group], [site_added_date], [site_last_updated_date], [ValidFrom], [ValidTo], CAST(1 AS BIT) AS IsCurrent FROM DELTA.ICONI_vBIRestart_Site;
