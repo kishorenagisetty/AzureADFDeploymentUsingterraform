@@ -1,3 +1,11 @@
+# ------------------------------------------------------------------------------
+# Author    : Kishore Kumar Nagisetty
+# GitHub    : https://github.com/kishorenagisetty
+# Project   : Azure Synapse ADF Deployment using Terraform
+# Created   : 2024-06-25
+# License   : MIT
+# ------------------------------------------------------------------------------
+
 resource "azurerm_virtual_network" "myVNet" {
   name                = var.virtual_network_name
   location            = var.location
