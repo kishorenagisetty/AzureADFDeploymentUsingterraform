@@ -1,3 +1,13 @@
+<!-- 👑 AUTHOR BADGE -->
+<p align="center">
+  <img src="https://img.shields.io/badge/Made%20by-Kishore%20Kumar%20Nagisetty-ff69b4?style=for-the-badge&logo=crown&logoColor=white" alt="Author Badge"/>
+</p>
+
+<h1 align="center">🎯 Azure Synapse Data Warehouse Deployment using Terraform</h1>
+
+<p align="center"><strong>A 100% automated Synapse Infrastructure by Kishore — Azure DevOps | Terraform | GitOps | Key Vault 👑</strong></p>
+
+
 # 🎯 Azure Synapse Data Warehouse Deployment using Terraform
 
 A fully automated solution to deploy **Azure Synapse Analytics** with private networking, integrated GitOps, secure secrets via Key Vault, and a SQL Pool — all powered by **Terraform** and **Azure DevOps**.
