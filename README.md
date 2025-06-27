@@ -8,6 +8,11 @@
 <p align="center"><strong>A 100% automated Synapse Infrastructure by Kishore — Azure DevOps | Terraform | GitOps | Key Vault 👑</strong></p>
 
 <p align="center">
+  <img src="https://github-readme-stats.vercel.app/api/pin/?username=kishorenagisetty&repo=AzureADFDeploymentUsingterraform&theme=radical" alt="Repo Summary Card" />
+</p>
+
+
+<p align="center">
   <a href="https://www.linkedin.com/in/kishorekumarnagisetty/">
     <img src="https://img.shields.io/badge/LinkedIn-Kishore%20Nagisetty-blue?style=for-the-badge&logo=linkedin" alt="LinkedIn Badge"/>
   </a>
