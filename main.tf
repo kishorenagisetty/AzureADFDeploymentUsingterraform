@@ -1,3 +1,10 @@
+# ------------------------------------------------------------------------------
+# Author    : Kishore Kumar Nagisetty
+# GitHub    : https://github.com/kishorenagisetty
+# Project   : Azure Synapse ADF Deployment using Terraform
+# Created   : 2024-06-25
+# License   : MIT
+# ------------------------------------------------------------------------------
 resource "random_password" "password" {
   length = 16
   special = true
