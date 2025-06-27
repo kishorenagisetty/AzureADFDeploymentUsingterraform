@@ -145,3 +145,6 @@ This project is licensed under the MIT License.
 Kishore Kumar Nagisetty
 🔗 GitHub | 💼 Azure & DevOps | 🚀 CI/CD | 📊 AI DataOps Engineering
 📬 Feel free to fork, star ⭐, and open an issue or PR!
+
+<!-- SEO Keywords -->
+<!-- Kishore Kumar Nagisetty GitHub | Azure DevOps Engineer | Terraform Specialist | SRE Expert | Azure Synapse Deployment | GitHub Portfolio -->
