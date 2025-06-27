@@ -146,5 +146,12 @@ Kishore Kumar Nagisetty
 🔗 GitHub | 💼 Azure & DevOps | 🚀 CI/CD | 📊 AI DataOps Engineering
 📬 Feel free to fork, star ⭐, and open an issue or PR!
 
+---
+
+© 2024 Kishore Kumar Nagisetty  
+This repository and its contents are licensed under the MIT License.  
+Reproductions must retain attribution to the original author.
+
+
 <!-- SEO Keywords -->
 <!-- Kishore Kumar Nagisetty GitHub | Azure DevOps Engineer | Terraform Specialist | SRE Expert | Azure Synapse Deployment | GitHub Portfolio -->
