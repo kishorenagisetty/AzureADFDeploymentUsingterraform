@@ -1,0 +1,6 @@
+﻿CREATE VIEW [ADAPT].[SAT_ReferralDocument_Adapt_Core]
+AS SELECT CONCAT_WS('|','ADAPT',CAST(DT.REFERENCE AS INT)) AS ReferralDocumentKey,
+DT.DOCNAME AS DocumentName,
+CAST(DT.STATUS AS BIGINT) AS DocumentStatus,
+ValidFrom, ValidTo, IsCurrent
+FROM ADAPT.PROP_DOCTRACK_GEN DT;

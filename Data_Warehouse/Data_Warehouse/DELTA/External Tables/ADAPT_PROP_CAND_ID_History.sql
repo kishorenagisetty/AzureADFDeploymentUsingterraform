@@ -1,0 +1,18 @@
+﻿CREATE EXTERNAL TABLE [DELTA].[ADAPT_PROP_CAND_ID_History] (
+    [BISUNIQUEID] BIGINT NULL,
+    [ID_TYPE] DECIMAL (20) NULL,
+    [REFERENCE] DECIMAL (16) NULL,
+    [ID_REF] NVARCHAR (MAX) NULL,
+    [ID_VERIF_DT] DATETIME2 (0) NULL,
+    [ValidFrom] DATETIME2 (0) NULL,
+    [ValidTo] DATETIME2 (0) NULL,
+    [row_sha2] NVARCHAR (MAX) NULL
+)
+    WITH (
+    DATA_SOURCE = [ADLG2_PSA],
+    LOCATION = N'delta/ADAPT/PROP_CAND_ID/IsCurrent=false',
+    FILE_FORMAT = [parquet_file_format],
+    REJECT_TYPE = VALUE,
+    REJECT_VALUE = 0
+    );
+

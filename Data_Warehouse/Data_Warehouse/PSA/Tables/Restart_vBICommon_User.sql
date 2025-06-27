@@ -1,0 +1,33 @@
+﻿CREATE TABLE [PSA].[Restart_vBICommon_User] (
+    [user_key]               INT           NOT NULL,
+    [user_id]                INT           NULL,
+    [user_forename]          VARCHAR (50)  NULL,
+    [user_surname]           VARCHAR (50)  NULL,
+    [user_fullname]          VARCHAR (101) NULL,
+    [user_agency_id]         INT           NULL,
+    [user_email]             VARCHAR (100) NULL,
+    [user_suspended_date]    DATETIME      NULL,
+    [user_type]              VARCHAR (500) NULL,
+    [user_organisation_id]   INT           NULL,
+    [user_added_date]        DATETIME      NULL,
+    [user_username]          VARCHAR (50)  NULL,
+    [user_supports_over_50]  VARCHAR (3)   NULL,
+    [user_locked]            BIT           NULL,
+    [user_sso_identifier]    VARCHAR (250) NULL,
+    [user_sso_enabled]       BIT           NULL,
+    [role_name]              VARCHAR (50)  NULL,
+    [user_notes]             VARCHAR (500) NULL,
+    [user_last_login]        DATETIME      NULL,
+    [user_archive]           BIT           NULL,
+    [user_timeout_timer]     INT           NULL,
+    [user_licencing_prog]    INT           NULL,
+    [user_last_updated_date] DATETIME      NULL,
+    [Sys_RunID]              INT           NULL,
+    [Sys_LoadDate]           DATETIME      NULL,
+    [Sys_LoadExpiryDate]     DATETIME      NULL,
+    [Sys_IsCurrent]          BIT           NULL,
+    [Sys_BusKey]             INT           NULL,
+    [Sys_HashKey]            BINARY (16)   NULL
+)
+WITH (CLUSTERED INDEX([Sys_BusKey]), DISTRIBUTION = HASH([Sys_BusKey]));
+

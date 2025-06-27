@@ -1,0 +1,2 @@
+﻿CREATE VIEW [ICONI].[vBIRestart_Correspondence]
+AS SELECT [correspondence_id], [cor_date_time], [cor_duration], [cor_owner_user_id], [cor_purpose], [cor_purpose_other], [cor_type], [cor_recipient], [cor_recipient_oth], [cor_successful], [cor_notes], [cor_provider_agency_id], [cor_site_id], [cor_related_entity_type], [cor_organisation_id], [cor_individual_id], [cor_engagement_id], [cor_added_date], [cor_added_by_user_id], [cor_last_updated_date], [ValidFrom], [ValidTo], CAST(1 AS BIT) AS IsCurrent FROM DELTA.ICONI_vBIRestart_Correspondence;

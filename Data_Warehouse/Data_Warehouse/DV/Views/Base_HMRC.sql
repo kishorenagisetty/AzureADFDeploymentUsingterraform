@@ -1,0 +1,5 @@
+﻿CREATE VIEW [DV].[Base_HMRC]
+AS SELECT * FROM DV.Base_HMRC_Default
+UNION ALL
+SELECT * FROM DV.Base_HMRC_Adapt;
+GO

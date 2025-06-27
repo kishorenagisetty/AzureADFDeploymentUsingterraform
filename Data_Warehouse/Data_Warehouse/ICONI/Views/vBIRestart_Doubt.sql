@@ -1,0 +1,2 @@
+﻿CREATE VIEW [ICONI].[vBIRestart_Doubt]
+AS SELECT [doubt_id], [doubt_raised_by_user_id], [doubt_raised_by_display], [doubt_raised_by_other], [doubt_tran_date], [doubt_tran_status_1], [doubt_tran_added_by_user_id], [doubt_tran_added_by_display], [doubt_tran_added_date], [doubt_tran_engagement_id], [doubt_tran_individual_id], [doubt_tran_notes], [doubt_tran_last_updated_date], [ValidFrom], [ValidTo], CAST(1 AS BIT) AS IsCurrent FROM DELTA.ICONI_vBIRestart_Doubt;

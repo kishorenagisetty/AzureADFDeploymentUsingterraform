@@ -1,0 +1,6 @@
+﻿CREATE VIEW [ADAPT].[HUB_Referral]
+AS SELECT
+CONCAT_WS('|','ADAPT',CAST(REFERENCE AS INT)) AS ReferralKey,
+'ADAPT.PROP_WP_GEN' AS RecordSource,
+ValidFrom, ValidTo, IsCurrent
+FROM ADAPT.PROP_WP_GEN W;

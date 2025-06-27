@@ -1,0 +1,6 @@
+﻿MaskingRuleID,RuleName,Description,AppliedTo,RuleCode
+1,StringFullMask,Takes all characters of a string and replaces them with 'X',STRING,"REPLICATE('X',LEN({FieldName}))"
+2,FirstAndLast,Replaces all but then first and last characters with 'X',STRING,"NULLIF(CASE WHEN LEN({FieldName}) <= 2 THEN REPLICATE('X',LEN({FieldName})) ELSE CONCAT(LEFT({FieldName}, 1),REPLICATE('X', LEN({FieldName})- 2),RIGHT({FieldName},1)) END,'')"
+3,MakeZero,Makes the number zero,INT,0
+4,Make1900,Makes the date 1900/01/01,DATE,CAST('19000101' AS DATE)
+5,NINO,Switches all the numbers for Xs,STRING,"TRANSLATE({FieldName},'0123456789','XXXXXXXXXX')"

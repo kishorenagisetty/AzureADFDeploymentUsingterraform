@@ -1,0 +1,2 @@
+﻿CREATE VIEW [ICONI].[vBIRestart_AssessmentValue]
+AS SELECT [assessment_value_id], [av_assessment_id], [av_code], [av_value], [av_last_updated_date], [ValidFrom], [ValidTo], CAST(1 AS BIT) AS IsCurrent FROM DELTA.ICONI_vBIRestart_AssessmentValue;

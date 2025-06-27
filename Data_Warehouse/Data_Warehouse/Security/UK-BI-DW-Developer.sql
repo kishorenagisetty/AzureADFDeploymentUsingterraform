@@ -1,0 +1,26 @@
+﻿CREATE USER [UK-BI-DW-Developer] FOR EXTERNAL PROVIDER;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

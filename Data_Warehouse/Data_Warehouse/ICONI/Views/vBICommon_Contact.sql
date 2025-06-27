@@ -1,0 +1,2 @@
+﻿CREATE VIEW [ICONI].[vBICommon_Contact]
+AS SELECT [contact_id], [con_contact_details_id], [con_forename], [con_surname], [con_job_title], [con_notes], [con_added_date], [con_title], [con_status], [con_last_updated_date], [ValidFrom], [ValidTo], CAST(1 AS BIT) AS IsCurrent FROM DELTA.ICONI_vBICommon_Contact;

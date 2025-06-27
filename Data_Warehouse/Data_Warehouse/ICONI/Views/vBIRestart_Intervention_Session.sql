@@ -1,0 +1,2 @@
+﻿CREATE VIEW [ICONI].[vBIRestart_Intervention_Session]
+AS SELECT [intervention_session_id], [ins_date_time], [ins_duration], [ins_advisor_user_id], [ins_external_advisor], [ins_notes], [ins_outcome], [ins_intervention_id], [ins_site_id], [ins_service_session_site_id], [ins_added_date], [ins_added_by_user_id], [ins_complete_date], [ins_complete_by_user_id], [ins_outcome_type], [ins_last_updated_date], [ValidFrom], [ValidTo], CAST(1 AS BIT) AS IsCurrent FROM DELTA.ICONI_vBIRestart_Intervention_Session;

@@ -1,0 +1,19 @@
+﻿CREATE EXTERNAL TABLE [DELTA].[ADAPT_PROP_X_SHORT_IV] (
+    [BISUNIQUEID] BIGINT NULL,
+    [SHORTLIST] DECIMAL (16) NULL,
+    [INTERVIEW] DECIMAL (16) NULL,
+    [X_SHORT] NVARCHAR (MAX) NULL,
+    [ValidFrom] DATETIME2 (0) NULL,
+    [ValidTo] DATETIME2 (0) NULL,
+    [row_sha2] NVARCHAR (MAX) NULL
+)
+    WITH (
+    DATA_SOURCE = [ADLG2_PSA],
+    LOCATION = N'delta/ADAPT/PROP_X_SHORT_IV/IsCurrent=true',
+    FILE_FORMAT = [parquet_file_format],
+    REJECT_TYPE = VALUE,
+    REJECT_VALUE = 0
+    );
+
+
+

@@ -1,0 +1,36 @@
+﻿CREATE TABLE [DV].[SAT_Vacancy_Iconi_Core] (
+    [VacancyHash]                   BINARY (32)     NULL,
+    [VacancyKey]                    NVARCHAR (100)  NULL,
+    [VacancyNotes]                  NVARCHAR (MAX)  NULL,
+    [VacancyJobDescription]         NVARCHAR (MAX)  NULL,
+    [VacancyPersonSpec]             NVARCHAR (MAX)  NULL,
+    [VacancyAddDate]                DATETIME2 (0)   NULL,
+    [VacancyAddUser]                INT             NULL,
+    [PaidBy]                        NVARCHAR (MAX)  NULL,
+    [VacancyApplicationDetails]     NVARCHAR (MAX)  NULL,
+    [VacancyOpenToDate]             NVARCHAR (MAX)  NULL,
+    [VacancyContractedWeeklyHours]  NVARCHAR (MAX)  NULL,
+    [VacancyJobTitle]               NVARCHAR (MAX)  NULL,
+    [VacancyContractType]           NVARCHAR (MAX)  NULL,
+    [VacancyDuration]               NVARCHAR (MAX)  NULL,
+    [VacancyStatus]                 NVARCHAR (MAX)  NULL,
+    [VacancyWorkingPattern]         NVARCHAR (MAX)  NULL,
+    [VacancyNumberRequired]         INT             NULL,
+    [VacancyNumberInternallyFilled] INT             NULL,
+    [VacancySalaryFrom]             DECIMAL (19, 4) NULL,
+    [VacancySkillsRequired]         NVARCHAR (MAX)  NULL,
+    [VacancySalaryUnit]             NVARCHAR (MAX)  NULL,
+    [VacancyLocationDetails]        NVARCHAR (MAX)  NULL,
+    [VacancyProjectID]              INT             NULL,
+    [VacancyVersionNo]              INT             NULL,
+    [VacancyJobBrokerManaged]       NVARCHAR (MAX)  NULL,
+    [VacancyAcctMgrUserID]          INT             NULL,
+    [VacancyContact]                INT             NULL,
+    [ContentHash]                   BINARY (32)     NULL,
+    [ValidFrom]                     DATETIME2 (0)   NULL,
+    [ValidTo]                       DATETIME2 (0)   NULL,
+    [IsCurrent]                     BIT             NULL
+)
+WITH (HEAP, DISTRIBUTION = HASH([VacancyHash]));
+GO
+

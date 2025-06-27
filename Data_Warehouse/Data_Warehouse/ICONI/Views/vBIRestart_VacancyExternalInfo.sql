@@ -1,0 +1,2 @@
+﻿CREATE VIEW [ICONI].[vBIRestart_VacancyExternalInfo]
+AS SELECT [vacancy_external_info_id], [vei_external_id], [vei_title], [vei_description], [vei_company], [vei_location], [vei_salary_min], [vei_salary_max], [vei_salary_predicted], [vei_contract_type], [vei_contract_time], [vei_redirect_url], [vei_category], [vei_created_date], [ValidFrom], [ValidTo], CAST(1 AS BIT) AS IsCurrent FROM DELTA.ICONI_vBIRestart_VacancyExternalInfo;

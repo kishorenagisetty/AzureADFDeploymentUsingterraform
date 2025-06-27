@@ -1,0 +1,8 @@
+﻿CREATE VIEW [ADAPT].[HUB_Case]
+AS SELECT 
+CONCAT_WS('|','ADAPT',CAST(C.REFERENCE AS INT)) AS CaseKey,
+'ADAPT.PROP_WP_GEN' AS RecordSource,
+C.ValidFrom,
+C.ValidTo,
+C.IsCurrent
+FROM ADAPT.PROP_WP_GEN C;

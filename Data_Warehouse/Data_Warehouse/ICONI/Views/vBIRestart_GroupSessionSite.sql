@@ -1,0 +1,2 @@
+﻿CREATE VIEW [ICONI].[vBIRestart_GroupSessionSite]
+AS SELECT [group_session_site_id], [gs_group_session_id], [gs_value], [ValidFrom], [ValidTo], CAST(1 AS BIT) AS IsCurrent FROM DELTA.ICONI_vBIRestart_GroupSessionSite;

@@ -1,0 +1,20 @@
+﻿CREATE EXTERNAL TABLE [DELTA].[ADAPT_PROP_X_CLIENT_JOB] (
+    [BISUNIQUEID] BIGINT NULL,
+    [CLIENT] DECIMAL (16) NULL,
+    [CONTACT] DECIMAL (16) NULL,
+    [JOB] DECIMAL (16) NULL,
+    [CONFID] NVARCHAR (MAX) NULL,
+    [ValidFrom] DATETIME2 (0) NULL,
+    [ValidTo] DATETIME2 (0) NULL,
+    [row_sha2] NVARCHAR (MAX) NULL
+)
+    WITH (
+    DATA_SOURCE = [ADLG2_PSA],
+    LOCATION = N'delta/ADAPT/PROP_X_CLIENT_JOB/IsCurrent=true',
+    FILE_FORMAT = [parquet_file_format],
+    REJECT_TYPE = VALUE,
+    REJECT_VALUE = 0
+    );
+
+
+

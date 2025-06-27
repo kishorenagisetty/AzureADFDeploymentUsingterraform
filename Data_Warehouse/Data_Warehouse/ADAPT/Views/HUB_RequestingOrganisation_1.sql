@@ -1,0 +1,8 @@
+﻿CREATE VIEW [ADAPT].[HUB_RequestingOrganisation]
+AS SELECT 
+TRIM(ORG_NAME) AS RequestingOrganisationKey,
+'ADAPT.PROP_CAND_PRAP' AS RecordSource,
+MIN(ValidFrom) AS ValidFrom, MAX(ValidTo) AS ValidTo, CAST(1 AS BIT) AS IsCurrent
+FROM ADAPT.PROP_CAND_PRAP
+WHERE NULLIF(ORG_NAME,'') IS NOT NULL AND IsCurrent = 1
+GROUP BY TRIM(ORG_NAME);

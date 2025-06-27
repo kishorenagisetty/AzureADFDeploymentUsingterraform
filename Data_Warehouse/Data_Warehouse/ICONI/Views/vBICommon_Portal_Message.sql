@@ -1,0 +1,2 @@
+﻿CREATE VIEW [ICONI].[vBICommon_Portal_Message]
+AS SELECT [portal_message_id], [pom_related_engagement_id], [pom_related_individual_id], [pom_content], [pom_recorded_by], [pom_read_receipt], [pom_sent_by_user_id], [pom_sent_date], [ValidFrom], [ValidTo], CAST(1 AS BIT) AS IsCurrent FROM DELTA.ICONI_vBICommon_Portal_Message;

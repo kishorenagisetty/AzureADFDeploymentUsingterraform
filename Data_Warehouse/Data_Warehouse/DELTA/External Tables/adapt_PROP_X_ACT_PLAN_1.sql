@@ -1,0 +1,19 @@
+﻿CREATE EXTERNAL TABLE [DELTA].[ADAPT_PROP_X_ACT_PLAN] (
+    [BISUNIQUEID] BIGINT NULL,
+    [ACTIVITY] DECIMAL (16) NULL,
+    [ACT_PLAN] DECIMAL (16) NULL,
+    [BARR_SPEC] DECIMAL (16) NULL,
+    [ValidFrom] DATETIME2 (0) NULL,
+    [ValidTo] DATETIME2 (0) NULL,
+    [row_sha2] NVARCHAR (MAX) NULL
+)
+    WITH (
+    DATA_SOURCE = [ADLG2_PSA],
+    LOCATION = N'delta/ADAPT/PROP_X_ACT_PLAN/IsCurrent=true',
+    FILE_FORMAT = [parquet_file_format],
+    REJECT_TYPE = VALUE,
+    REJECT_VALUE = 0
+    );
+
+
+

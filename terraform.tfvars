@@ -1,0 +1,35 @@
+# ResourceGroup
+resource_group_name                     = "TF-AzureDataWareHouse1"
+location                                = "uksouth"
+# Synapse Workspace
+synapse_managed_RG_name                 = "TF-AzureDataWareHouse-mgd-RG"
+storage_account_name                    = "tfadwhstorage1"
+storage_data_lake_gen2_filesystem_name  = "tfadwhfilesystem"
+synapse_workspace_name                  = "tfadwhsworkspace"
+azure_devops_account_name               = "citiDevOps"
+azure_devops_project_name               = "citiusa"
+azure_devops_branch_name                = "master"
+azure_devops_repo_name                  = "datawarehouse-Terraform"
+synapse_sql_pool_name                   = "testsynapsesqlpool"
+sql_username                            = "tfsqladmin"
+# firewall_allow_ip_address               = "152.59.195.10"
+start_ip_address_1                      = "0.0.0.0"
+end_ip_address_1                        = "255.255.255.255"
+start_ip_address_2                      = "20.162.247.83"
+end_ip_address_2                        = "20.162.247.83"
+start_ip_address_3                      = "172.167.203.60"
+end_ip_address_3                        = "172.167.203.60"
+start_ip_address_4                      = "172.167.203.70"
+end_ip_address_4                        = "172.167.203.70"
+start_ip_address_5                      = "193.41.96.219"
+end_ip_address_5                        = "193.41.96.219"
+# Virtual Network
+virtual_network_name                    = "TF-VNet"
+vnet_address_space                      = ["10.69.2.0/24"]
+subnet_name                             = "TF-subnet"
+subnet_address_space                    = ["10.69.2.0/25"]
+# KeyVault
+vault_Name                              = "TF-KV"
+user_object_id                          = "f064b8cd-3fe9-4613-88f8-5227e3683e8a"
+kv_secret_name                          = "tfSynapseSQLPassword"
+#user_object_id                          = "d0b56527-eabc-44b2-a561-9314367b5e43"

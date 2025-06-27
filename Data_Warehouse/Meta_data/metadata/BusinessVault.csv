@@ -1,0 +1,3 @@
+﻿BusinessVaultID,ExecutionGroup,ProcedureName,Comments
+1,1,BV.usp_BV_ReferralStatus,Populates a LINK table LINK_Referral_ReferralStatus based on a rules table
+301,1,DV.sp_ADAPT_F_AssignmentEarnings,Populates a DV.F_AssignmentEarnings table.

@@ -1,0 +1,14 @@
+﻿CREATE EXTERNAL TABLE [DELTA].[ADAPT_CODES_HIDDEN] (
+    [CODE_ID] BIGINT NULL,
+    [LANGUAGE_ID] BIGINT NULL,
+    [ValidFrom] DATETIME2 (0) NULL,
+    [ValidTo] DATETIME2 (0) NULL
+)
+    WITH (
+    DATA_SOURCE = [ADLG2_PSA],
+    LOCATION = N'delta/ADAPT/CODES_HIDDEN/IsCurrent=true',
+    FILE_FORMAT = [parquet_file_format],
+    REJECT_TYPE = VALUE,
+    REJECT_VALUE = 0
+    );
+

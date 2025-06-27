@@ -1,0 +1,18 @@
+﻿CREATE EXTERNAL TABLE [DELTA].[ADAPT_PROP_X_PC_BARRIER] (
+    [BISUNIQUEID] BIGINT NULL,
+    [BARRIER] DECIMAL (16) NULL,
+    [CONTRACT] DECIMAL (16) NULL,
+    [ValidFrom] DATETIME2 (0) NULL,
+    [ValidTo] DATETIME2 (0) NULL,
+    [row_sha2] NVARCHAR (MAX) NULL
+)
+    WITH (
+    DATA_SOURCE = [ADLG2_PSA],
+    LOCATION = N'delta/ADAPT/PROP_X_PC_BARRIER/IsCurrent=true',
+    FILE_FORMAT = [parquet_file_format],
+    REJECT_TYPE = VALUE,
+    REJECT_VALUE = 0
+    );
+
+
+

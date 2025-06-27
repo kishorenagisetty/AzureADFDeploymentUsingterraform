@@ -1,0 +1,19 @@
+﻿CREATE EXTERNAL TABLE [DELTA].[ADAPT_CODES_History] (
+    [CODE_ID] BIGINT NULL,
+    [PARENT_CODE_ID] BIGINT NULL,
+    [GROUP_ID] BIGINT NULL,
+    [NAME] NVARCHAR (MAX) NULL,
+    [LANGUAGE_ID] BIGINT NULL,
+    [GLOBAL_CODE_ID] BIGINT NULL,
+    [ValidFrom] DATETIME2 (0) NULL,
+    [ValidTo] DATETIME2 (0) NULL,
+    [row_sha2] NVARCHAR (MAX) NULL
+)
+    WITH (
+    DATA_SOURCE = [ADLG2_PSA],
+    LOCATION = N'delta/ADAPT/CODES/IsCurrent=false',
+    FILE_FORMAT = [parquet_file_format],
+    REJECT_TYPE = VALUE,
+    REJECT_VALUE = 0
+    );
+

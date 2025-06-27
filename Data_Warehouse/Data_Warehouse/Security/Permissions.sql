@@ -1,0 +1,13 @@
+﻿--GRANT ALTER
+   -- ON SCHEMA::[dbo] TO [UKMAXBIDEVDF01];
+
+
+--GO
+--GRANT SELECT
+    --ON SCHEMA::[dbo] TO PUBLIC;
+
+
+GO
+GRANT SELECT
+    ON SCHEMA::[dbo] TO PUBLIC;
+

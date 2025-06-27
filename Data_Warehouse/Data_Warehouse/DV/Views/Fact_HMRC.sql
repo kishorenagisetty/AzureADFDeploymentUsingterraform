@@ -1,0 +1,36 @@
+﻿Create VIEW [DV].[Fact_HMRC] AS (
+SELECT
+CONVERT(CHAR(66),ISNULL(hc.HMRCHash,CAST(0x0 AS BINARY(32))),1) AS HMRCHash
+,hc.RecordSource
+,CONVERT(CHAR(66),ISNULL(lch.CaseHash,CAST(0x0 AS BINARY(32))),1) AS CaseHash
+,CONVERT(CHAR(66),ISNULL(lcp.ParticipantHash,CAST(0x0 AS BINARY(32))),1) AS ParticipantHash
+,CONVERT(CHAR(66),ISNULL(ds.DeliverySiteHash, CAST(0x0 AS BINARY(32))),1) AS DeliverySiteHash
+,CASE WHEN S_HAC.DateCreated IS NULL THEN -1 ELSE CAST(CONVERT(CHAR(8),CONVERT(DATETIME,S_HAC.DateCreated,102),112) AS INT) END AS DateCreatedKey
+,CASE WHEN S_HAC.NotificationDate IS NULL THEN -1 ELSE CAST(CONVERT(CHAR(8),CONVERT(DATETIME,S_HAC.NotificationDate,102),112) AS INT) END AS NotificationDateKey
+,CAST(CONVERT(CHAR(8),GETDATE(),112) AS INT) AS ImportDateKey
+,CONVERT(CHAR(66),ISNULL(R_PR.ProgrammeHash, CAST(0x0 AS BINARY(32))),1) AS ProgrammeHash
+,CASE WHEN SCAC.CaseStatus IS NULL THEN CONVERT(CHAR(66),ISNULL(NULL,CAST(0x0 AS BINARY(32))),1) ELSE CONVERT(CHAR(66),CAST(HASHBYTES('SHA2_256',CAST(CAST(SCAC.CaseStatus AS BIGINT) AS VARCHAR)) AS BINARY(32)),1) END AS CaseStatusHash
+,CASE WHEN SRAC.ReferralDate IS NULL THEN -1 ELSE CAST(CONVERT(CHAR(8),SRAC.ReferralDate,112) AS INT) END AS ReferralDateKey
+,CASE WHEN SCAD.StartDate IS NULL THEN -1 ELSE CAST(CONVERT(CHAR(8),SCAD.StartDate,112) AS INT) END AS StartDateKey
+,CASE WHEN SCAD.StartVerifiedDate IS NULL THEN -1 ELSE CAST(CONVERT(CHAR(8),SCAD.StartVerifiedDate,112) AS INT) END AS VerifiedDateKey
+,CASE WHEN SCAD.LeaveDate IS NULL THEN -1 ELSE CAST(CONVERT(CHAR(8),SCAD.LeaveDate,112) AS INT) END AS LeaveDateKey
+,CASE WHEN SCAD.ProjectedLeaveDate IS NULL THEN -1 ELSE CAST(CONVERT(CHAR(8),SCAD.ProjectedLeaveDate,112) AS INT) END AS ProjectedLeaveDateKey
+,CASE WHEN S_HAC.NotificationType = 'FIRST_PAYMENT_DATE' THEN 1 ELSE 0 END AS 'FirstPaymentDate'
+,CASE WHEN S_HAC.NotificationType = 'EARNINGS_CROSSED_1000' THEN 1 ELSE 0 END AS 'EarningsCrossed1000'
+,CASE WHEN S_HAC.NotificationType = 'EARNINGS_CROSSED_2000' THEN 1 ELSE 0 END AS 'EarningsCrossed2000'
+,CASE WHEN S_HAC.NotificationType = 'EARNINGS_REACHED_THRESHOLD' THEN 1 ELSE 0 END AS 'EarningsReachedThreshold'
+,CASE WHEN S_HAC.NotificationType = 'EARNINGS_REACHED_LO_THRESHOLD' THEN 1 ELSE 0 END AS 'EarningsReachedLoThreshold'
+,CASE WHEN S_HAC.NotificationType = 'EARNINGS_REACHED_HI_THRESHOLD' THEN 1 ELSE 0 END AS 'EarningsReachedHiThreshold'
+,CASE WHEN S_HAC.NotificationType = 'END_OF_EMPLOYMENT' THEN 1 ELSE 0 END AS 'EndOfEmployment'
+FROM DV.HUB_HMRC hc
+LEFT JOIN DV.SAT_HMRC_Adapt_Core S_HAC ON S_HAC.HMRCHash = hc.HMRCHash AND S_HAC.IsCurrent = 1
+LEFT JOIN DV.LINK_Case_HMRC lch ON lch.HMRCHash = hc.HMRCHash
+LEFT JOIN DV.LINK_Case_Participant lcp ON lcp.CaseHash = lch.CaseHash
+LEFT JOIN DV.LINK_Case_Referral lcr ON lcr.CaseHash = lch.CaseHash
+LEFT JOIN DV.LINK_Case_DeliverySite ds ON ds.CaseHash = lch.CaseHash
+LEFT JOIN DV.SAT_Case_Adapt_Core SCAC ON SCAC.CaseHash = lcr.CaseHash AND SCAC.IsCurrent = 1
+LEFT JOIN DV.SAT_Referral_Adapt_Core SRAC ON SRAC.ReferralHash = lcr.ReferralHash AND SRAC.IsCurrent = 1
+LEFT JOIN DV.LINK_Referral_Programme R_PR ON R_PR.ReferralHash = lcr.ReferralHash 
+LEFT JOIN DV.SAT_Case_Adapt_Dates SCAD ON SCAD.CaseHash = lch.CaseHash AND SCAD.IsCurrent = 1
+);
+GO

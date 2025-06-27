@@ -1,0 +1,5 @@
+﻿WorkFlowStageID,StageCategory,Programme,Enquiry,Referral,PlanActive(on program),InWork,Closed
+1,Referral,WHP Wales,N,Y,N,N,N
+2,On Programme,WHP Wales,N,N,Y,N,N
+3,In Work,WHP Wales,N,N,Y,Y,N
+4,Exit,WHP Wales,N,N,N,N,Y

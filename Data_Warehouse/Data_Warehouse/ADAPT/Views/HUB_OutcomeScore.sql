@@ -1,0 +1,7 @@
+CREATE VIEW [ADAPT].[HUB_OutcomeScore] AS SELECT
+	CONCAT_WS('|','ADAPT',CAST(S.REFERENCE AS INT), S.BISUNIQUEID) AS OutcomeScoreKey
+	,'ADAPT.PROP_SOC_IMP_HIST' AS RecordSource
+	, S.ValidFrom
+	, S.ValidTo
+	, S.IsCurrent 
+FROM ADAPT.PROP_SOC_IMP_HIST S;

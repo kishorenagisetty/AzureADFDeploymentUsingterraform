@@ -1,0 +1,33 @@
+﻿CREATE TABLE [PSA].[Restart_vBIRestart_Expense] (
+    [exp_key]                          INT             NOT NULL,
+    [expense_id]                       INT             NULL,
+    [exp_date]                         DATETIME        NULL,
+    [exp_type]                         VARCHAR (500)   NULL,
+    [exp_subtype]                      VARCHAR (500)   NULL,
+    [exp_cost]                         REAL            NULL,
+    [exp_payment_method]               VARCHAR (500)   NULL,
+    [exp_paid_date]                    DATETIME        NULL,
+    [exp_payment_status]               VARCHAR (500)   NULL,
+    [exp_evidence_document_id]         INT             NULL,
+    [exp_notes]                        NVARCHAR (4000) NULL,
+    [exp_approval_status]              VARCHAR (500)   NULL,
+    [exp_rejected_reason]              NVARCHAR (200)  NULL,
+    [exp_engagement_id]                INT             NULL,
+    [exp_added_date]                   DATETIME        NULL,
+    [exp_added_by_user_id]             INT             NULL,
+    [exp_approval_decision_by_user_id] INT             NULL,
+    [exp_approval_decision_date]       DATETIME        NULL,
+    [exp_complete_date]                DATETIME        NULL,
+    [exp_complete_by_user_id]          INT             NULL,
+    [exp_provider_agency_id]           INT             NULL,
+    [exp_site_id]                      INT             NULL,
+    [exp_last_updated_date]            DATETIME        NULL,
+    [Sys_RunID]                        INT             NULL,
+    [Sys_LoadDate]                     DATETIME        NULL,
+    [Sys_LoadExpiryDate]               DATETIME        NULL,
+    [Sys_IsCurrent]                    BIT             NULL,
+    [Sys_BusKey]                       INT             NULL,
+    [Sys_HashKey]                      BINARY (16)     NULL
+)
+WITH (CLUSTERED INDEX([Sys_BusKey]), DISTRIBUTION = HASH([Sys_BusKey]));
+

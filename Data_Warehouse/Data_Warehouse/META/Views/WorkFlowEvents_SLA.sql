@@ -1,0 +1,15 @@
+CREATE VIEW [META].[WorkFlowEvents_SLA] AS 
+SELECT [CaseKey]
+      ,[WorkFlowEventID]
+      ,[WorkFlowEventName]
+      ,[WorkFlowEventDate]
+      ,[EventEndDate]
+      ,[WorkFlowEventOriginalStartDate]
+      ,[EventEstimatedEndDate]
+      ,[WorkFlowEventPreviousEventID]
+      ,[WorkFlowEventSLAType]
+      ,[WorkFlowEventSLADurationType]
+      ,[WorkFlowEventSLADuration]
+      ,[WorkFlowEventCSSRelated]
+      ,[WorkFlowEventRecurring]
+  FROM STG.WorkFlowEvents_SLA;

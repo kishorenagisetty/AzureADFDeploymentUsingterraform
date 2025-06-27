@@ -1,0 +1,40 @@
+﻿CREATE TABLE [DV].[SAT_Activity_Iconi_Refugee]
+(
+	[ActivityHash] [BINARY](32) NULL,
+	[ActivityKey] [VARCHAR](18) NOT NULL,
+	[ActivityID] [VARCHAR](33) NULL,
+	[ActivityStartDate] [DATETIME2](0) NULL,
+	[ActivityBookedDuration] [INT] NULL,
+	[ActivityType] [NVARCHAR](MAX) NULL,
+	[ActivityContactMethod] [NVARCHAR](MAX) NULL,
+	[ActivityOwningEmployee] [INT] NULL,
+	[ActivityOtherEmployee] [NVARCHAR](MAX) NULL,
+	[ActivityLocation] [NVARCHAR](MAX) NULL,
+	[ActivityStatus] [NVARCHAR](MAX) NULL,
+	[ActivityActualDuration] [INT] NULL,
+	[ActivityLevel] [NVARCHAR](MAX) NULL,
+	[meet_agency_id] [INT] NULL,
+	[meet_site_id] [INT] NULL,
+	[meet_engagement_id] [INT] NULL,
+	[meet_organisation_id] [INT] NULL,
+	[meet_organisation_contact_id] [INT] NULL,
+	[meet_added_date] [DATETIME2](0) NULL,
+	[meet_added_by_user_id] [INT] NULL,
+	[ActivityCompletedDate] [DATETIME2](0) NULL,
+	[ActivityCompletedBy] [INT] NULL,
+	[ActivityIsMandatory] [NVARCHAR](MAX) NULL,
+	[ActivityIsActionPlanComplete] [NVARCHAR](MAX) NULL,
+	[ActivityDidNotAttendReason] [NVARCHAR](MAX) NULL,
+	[AttendanceReasonOther] [NVARCHAR](MAX) NULL,
+	[ActivityIsRebooked] [NVARCHAR](MAX) NULL,
+	[LastUpdatedDate] [DATETIME2](0) NULL,
+	[ContentHash] [BINARY](32) NULL,
+	[ValidFrom] [DATETIME2](0) NULL,
+	[ValidTo] [DATETIME2](0) NULL,
+	[IsCurrent] [BIT] NULL
+)
+WITH
+(
+	DISTRIBUTION = HASH ( [ActivityHash] ),
+	HEAP
+)

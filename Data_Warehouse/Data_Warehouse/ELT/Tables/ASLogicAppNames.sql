@@ -1,0 +1,11 @@
+CREATE TABLE [ELT].[ASLogicAppNames]
+(
+	[ASLogicAPPName] [varchar](8000) NULL,
+	[PipelineName] [varchar](32) NULL
+)
+WITH
+(
+	DISTRIBUTION = ROUND_ROBIN,
+	CLUSTERED COLUMNSTORE INDEX
+)
+GO

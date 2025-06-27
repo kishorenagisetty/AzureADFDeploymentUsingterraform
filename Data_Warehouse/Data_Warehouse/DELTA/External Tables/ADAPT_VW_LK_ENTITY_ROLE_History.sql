@@ -1,0 +1,17 @@
+﻿CREATE EXTERNAL TABLE [DELTA].[ADAPT_VW_LK_ENTITY_ROLE_History] (
+    [REFERENCE] BIGINT NULL,
+    [ROLE_ID] BIGINT NULL,
+    [DEFAULT_ROLE] NVARCHAR (MAX) NULL,
+    [DEFAULT_VALUE] NVARCHAR (MAX) NULL,
+    [ValidFrom] DATETIME2 (0) NULL,
+    [ValidTo] DATETIME2 (0) NULL,
+    [row_sha2] NVARCHAR (MAX) NULL
+)
+    WITH (
+    DATA_SOURCE = [ADLG2_PSA],
+    LOCATION = N'delta/ADAPT/VW_LK_ENTITY_ROLE/IsCurrent=false',
+    FILE_FORMAT = [parquet_file_format],
+    REJECT_TYPE = VALUE,
+    REJECT_VALUE = 0
+    );
+

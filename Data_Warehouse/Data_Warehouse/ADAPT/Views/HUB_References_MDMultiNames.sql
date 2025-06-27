@@ -1,0 +1,8 @@
+﻿CREATE VIEW [ADAPT].[HUB_References_MDMultiNames]
+AS SELECT 
+CONCAT_WS('|','MD_MULTI_NAMES',TYPE,ID) AS ReferencesKey,
+'ADAPT.MD_MULTI_NAMES' AS RecordSource,
+ValidFrom, ValidTo,IsCurrent
+FROM ADAPT.MD_MULTI_NAMES;
+GO
+

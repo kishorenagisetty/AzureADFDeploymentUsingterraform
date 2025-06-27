@@ -1,0 +1,16 @@
+﻿CREATE EXTERNAL TABLE [DELTA].[ADAPT_PROP_IND_SECT_History] (
+    [BISUNIQUEID] BIGINT NULL,
+    [REFERENCE] DECIMAL (16) NULL,
+    [INDUSTRY] DECIMAL (20) NULL,
+    [ValidFrom] DATETIME2 (0) NULL,
+    [ValidTo] DATETIME2 (0) NULL,
+    [row_sha2] NVARCHAR (MAX) NULL
+)
+    WITH (
+    DATA_SOURCE = [ADLG2_PSA],
+    LOCATION = N'delta/ADAPT/PROP_IND_SECT/IsCurrent=false',
+    FILE_FORMAT = [parquet_file_format],
+    REJECT_TYPE = VALUE,
+    REJECT_VALUE = 0
+    );
+

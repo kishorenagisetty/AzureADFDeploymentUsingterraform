@@ -1,0 +1,2 @@
+﻿CREATE VIEW [ICONI].[vBICommon_Organisation]
+AS SELECT [organisation_id], [org_contact_details_id], [org_primary_contact_id], [org_name], [org_type], [org_soc], [org_iconi_notes], [org_version_no], [org_notes], [org_legal_status], [org_no_of_employees], [org_sic], [org_disability_conf], [org_disability_conf_level], [org_status], [org_source], [org_initial_prog], [org_added_by_user_id], [org_added_date], [org_last_updated_date], [ValidFrom], [ValidTo], CAST(1 AS BIT) AS IsCurrent FROM DELTA.ICONI_vBICommon_Organisation;

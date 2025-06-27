@@ -1,0 +1,2 @@
+﻿CREATE VIEW [ICONI].[vBICommon_EarningsNotification]
+AS SELECT [earnings_notification_id], [ern_engagement_id], [ern_notification_type], [ern_date_created], [ern_notification_date], [ern_nino], [ern_prap_po_number], [ern_asn_creation_status], [ern_asn_number], [ern_invoice_number], [ern_acknowledgement_required], [ern_added_by_user_id], [ern_added_date], [ern_proj_id], [ern_last_updated_date], [ValidFrom], [ValidTo], CAST(1 AS BIT) AS IsCurrent FROM DELTA.ICONI_vBICommon_EarningsNotification;

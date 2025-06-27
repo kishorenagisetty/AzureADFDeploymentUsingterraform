@@ -1,0 +1,37 @@
+﻿CREATE TABLE [DV].[SAT_Case_Iconi_Refugee]
+    (
+        [CaseHash]                       [binary](32)    NULL,
+        [CaseKey]                        [varchar](18)   NOT NULL,
+        [CaseID]                         [varchar](33)   NULL,
+        [CaseStatus]                     [nvarchar](max) NULL,
+        [LeaveReason]                    [nvarchar](max) NULL,
+        [WorkReadinessStatus]            [nvarchar](max) NULL,
+        [AdvisorAcknowledgementRequired] [datetime2](0)  NULL,
+        [ExitReasonOther]                [nvarchar](max) NULL,
+        [OnwardDestination]              [nvarchar](max) NULL,
+        [OnwardDestinationOther]         [nvarchar](max) NULL,
+        [LeftReason]                     [nvarchar](max) NULL,
+        [LeftReasonOther]                [nvarchar](max) NULL,
+        [LeftStage]                      [nvarchar](max) NULL,
+        [LeftStageOther]                 [nvarchar](max) NULL,
+        [DidNotStartReason]              [nvarchar](max) NULL,
+        [DidNotStartReasonOther]         [nvarchar](max) NULL,
+        [SignedPrivacyNoticeUploaded]    [nvarchar](max) NULL,
+        [PrivacyRightsExercised]         [nvarchar](max) NULL,
+        [PrivacyRightsDetails]           [nvarchar](max) NULL,
+        [DisengagedReason]               [nvarchar](max) NULL,
+        [FrequencyOfContact]             [nvarchar](max) NULL,
+        [TranOwnerUserId]                [int]           NULL,
+        [TranIndividualId]               [int]           NULL,
+        [TranStatus]                     [nvarchar](max) NULL,
+        [ProviderName]                   [nvarchar](max) NULL,
+        [ContractArea]                   [nvarchar](max) NULL,
+        [Nationality]                    [nvarchar](max) NULL,
+        [Outcome]                        [nvarchar](max) NULL,
+        [ContentHash]                    [binary](32)    NULL,
+        [ValidFrom]                      [datetime2](0)  NULL,
+        [ValidTo]                        [datetime2](0)  NULL,
+        [IsCurrent]                      [bit]           NULL
+    )
+WITH (DISTRIBUTION=HASH([CaseHash]), HEAP)
+GO

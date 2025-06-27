@@ -1,0 +1,2 @@
+﻿CREATE VIEW [ICONI].[vBICommon_Organisation_Employer_Info]
+AS SELECT [organisation_employer_info_id], [org_emp_info_organisation_id], [org_emp_info_contact], [org_emp_info_managing_erm], [org_emp_info_locations], [org_emp_info_relationships], [org_emp_info_notes], [org_emp_info_added_by_user_id], [org_emp_info_added_by_display], [org_emp_info_added_date], [ValidFrom], [ValidTo], CAST(1 AS BIT) AS IsCurrent FROM DELTA.ICONI_vBICommon_Organisation_Employer_Info;

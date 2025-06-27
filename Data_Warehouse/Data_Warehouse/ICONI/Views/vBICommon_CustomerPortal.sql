@@ -1,0 +1,2 @@
+﻿CREATE VIEW [ICONI].[vBICommon_CustomerPortal]
+AS SELECT [ind_portal_individual_id], [ind_portal_username], [ind_portal_registration_date], [ind_portal_registration_status], [ind_portal_registration_added_by_user_id], [ind_portal_opt_out], [ind_portal_opt_out_reason], [ind_portal_last_active], [ind_portal_last_welcome_email], [ValidFrom], [ValidTo], CAST(1 AS BIT) AS IsCurrent FROM DELTA.ICONI_vBICommon_CustomerPortal 

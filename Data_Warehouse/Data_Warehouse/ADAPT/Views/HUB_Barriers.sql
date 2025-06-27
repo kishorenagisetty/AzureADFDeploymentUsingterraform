@@ -1,0 +1,11 @@
+﻿CREATE VIEW [ADAPT].[HUB_Barriers] AS (
+SELECT 
+CONCAT_WS('|','ADAPT',CAST([REFERENCE] AS INT)) AS BarriersKey,
+'ADAPT.PROP_BARRIER_GEN'						AS RecordSource,
+[ValidFrom], 
+[ValidTo], 
+IsCurrent 
+FROM 
+ADAPT.PROP_BARRIER_GEN
+);
+GO

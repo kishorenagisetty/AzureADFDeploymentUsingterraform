@@ -1,0 +1,11 @@
+﻿CREATE SCHEMA [DELTA]
+    AUTHORIZATION [dbo];
+
+
+
+
+
+
+
+
+

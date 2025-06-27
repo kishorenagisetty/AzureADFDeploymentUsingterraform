@@ -1,0 +1,8 @@
+﻿CREATE VIEW [ADAPT].[HUB_Document] AS SELECT CONCAT_WS('|', 'ADAPT', CAST(D.ID AS INT)) AS DocumentKey
+	,'ADAPT.PROP_DOCTRACK_GEN' AS RecordSource
+	,ValidFrom, ValidTo, IsCurrent
+FROM ADAPT.PROP_DOCTRACK_GEN D
+WHERE
+ID IS NOT NULL
+AND D.IsCurrent = 1;
+GO

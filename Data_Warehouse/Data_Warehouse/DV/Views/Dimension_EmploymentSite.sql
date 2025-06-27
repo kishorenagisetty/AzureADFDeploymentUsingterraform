@@ -1,0 +1,37 @@
+﻿CREATE VIEW [DV].[Dimension_EmploymentSite] AS SELECT
+	[EmploymentSiteHash]
+	,[RecordSource]
+	,[EmploymentSiteName]
+	,[EmploymentSiteStatus]
+	,[EmploymentSiteWebsiteAddress]
+	,[EmploymentSiteSource]
+	,[EmploymentSiteNumberOfEmployees]
+	,[EmploymentSiteLocation]
+	,[EmploymentSiteBlacklisted]
+	,[EmploymentSiteTradingName]
+	,[EmploymentSiteRegion]
+	,[EmploymentSiteSIC]
+	,[EmploymentSiteIncorporationType]
+	,[EmploymentSiteCreditStatus]
+	,[EmploymentSiteManagedType]
+FROM (
+	SELECT
+	[EmploymentSiteHash]
+	,row_number() OVER (PARTITION BY [EmploymentSiteHash] ORDER BY [EmploymentSiteHash]) rn
+	,[RecordSource]
+	,[EmploymentSiteName]
+	,[EmploymentSiteStatus]
+	,[EmploymentSiteWebsiteAddress]
+	,[EmploymentSiteSource]
+	,[EmploymentSiteNumberOfEmployees]
+	,[EmploymentSiteLocation]
+	,[EmploymentSiteBlacklisted]
+	,[EmploymentSiteTradingName]
+	,[EmploymentSiteRegion]
+	,[EmploymentSiteSIC]
+	,[EmploymentSiteIncorporationType]
+	,[EmploymentSiteCreditStatus]
+	,[EmploymentSiteManagedType]
+	FROM [DV].[Base_EmploymentSite]
+	) src
+WHERE (rn = 1);

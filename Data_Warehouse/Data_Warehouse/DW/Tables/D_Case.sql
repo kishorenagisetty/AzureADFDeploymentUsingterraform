@@ -1,0 +1,32 @@
+﻿CREATE TABLE [DW].[D_Case] (
+    [Case_Skey]                         INT            NOT NULL,
+    [CaseBusKey]                        INT            NOT NULL,
+    [CaseReferenceID]                   INT            NULL,
+    [CaseSource]                        VARCHAR (255)  NULL,
+    [OtherReferralSource]               VARCHAR (255)  NULL,
+    [ClinicianName]                     VARCHAR (8000) NULL,
+    [CaseComplexity]                    VARCHAR (255)  NULL,
+    [PONumber]                          VARCHAR (255)  NULL,
+    [IsClientAttendingWork]             BIT            NULL,
+    [IsVeterenReferral]                 BIT            NULL,
+    [IsReReferralCase]                  BIT            NULL,
+    [IsDirectReferral]                  BIT            NULL,
+    [IsCaseClosed]                      BIT            NULL,
+    [Occupation]                        VARCHAR (255)  NULL,
+    [JobTitle]                          VARCHAR (255)  NULL,
+    [JobType]                           VARCHAR (255)  NULL,
+    [HoursWorkedPerWeek]                INT            NULL,
+    [IsApprentice]                      BIT            NULL,
+    [IsSelfEmployed]                    BIT            NULL,
+    [IsMentalHealthDisclosedToEmployer] BIT            NULL,
+    [Src_CreatedBy]                     VARCHAR (255)  NULL,
+    [Src_LastModifiedDate]              DATETIME       NULL,
+    [Src_LastModifiedBy]                VARCHAR (255)  NULL,
+    [Active]                            BIT            NULL,
+    [Sys_LoadDate]                      DATETIME       NULL,
+    [Sys_LoadExpiryDate]                DATETIME       NULL,
+    [Sys_IsCurrent]                     BIT            NULL,
+    [Sys_RunID]                         INT            NULL
+)
+WITH (CLUSTERED COLUMNSTORE INDEX, DISTRIBUTION = REPLICATE);
+

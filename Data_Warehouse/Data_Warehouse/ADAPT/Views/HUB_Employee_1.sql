@@ -1,0 +1,8 @@
+--This is for testing by Sagar Kadiyala
+CREATE VIEW [ADAPT].[HUB_Employee]
+AS SELECT
+CONCAT_WS('|','ADAPT', CAST(REFERENCE AS INT)) AS EmployeeKey,
+'ADAPT.PROP_EMPLOYEE_GEN' AS RecordSource,
+E.ValidFrom, E.ValidTo, E.IsCurrent
+FROM ADAPT.PROP_EMPLOYEE_GEN E
+WHERE NULLIF(E.NAME,'') IS NOT NULL;

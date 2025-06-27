@@ -1,0 +1,20 @@
+﻿CREATE EXTERNAL TABLE [DELTA].[ADAPT_PROP_OWN_CONS] (
+    [BISUNIQUEID] BIGINT NULL,
+    [OCC_ID] DECIMAL (16) NULL,
+    [REFERENCE] DECIMAL (16) NULL,
+    [CONSULTANT] DECIMAL (16) NULL,
+    [TEAM] DECIMAL (16) NULL,
+    [ValidFrom] DATETIME2 (0) NULL,
+    [ValidTo] DATETIME2 (0) NULL,
+    [row_sha2] NVARCHAR (MAX) NULL
+)
+    WITH (
+    DATA_SOURCE = [ADLG2_PSA],
+    LOCATION = N'delta/ADAPT/PROP_OWN_CONS/IsCurrent=true',
+    FILE_FORMAT = [parquet_file_format],
+    REJECT_TYPE = VALUE,
+    REJECT_VALUE = 0
+    );
+
+
+

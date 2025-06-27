@@ -1,0 +1,18 @@
+﻿CREATE SCHEMA [DV]
+    AUTHORIZATION [dbo];
+
+
+
+
+
+
+
+
+
+
+
+
+GO
+GRANT SELECT
+    ON SCHEMA::[DV] TO PUBLIC;
+

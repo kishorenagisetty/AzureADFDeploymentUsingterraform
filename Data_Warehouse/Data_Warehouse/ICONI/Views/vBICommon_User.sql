@@ -1,0 +1,2 @@
+﻿CREATE VIEW [ICONI].[vBICommon_User]
+AS SELECT [user_id], [user_forename], [user_surname], [user_fullname], [user_agency_id], [user_email], [user_suspended_date], [user_type], [user_organisation_id], [user_added_date], [user_username], [user_supports_over_50], [user_locked], [user_sso_identifier], [user_sso_enabled], [role_name], [user_notes], [user_last_login], [user_archive], [user_timeout_timer], [user_licencing_prog], [user_last_updated_date], [ValidFrom], [ValidTo], CAST(1 AS BIT) AS IsCurrent FROM DELTA.ICONI_vBICommon_User 

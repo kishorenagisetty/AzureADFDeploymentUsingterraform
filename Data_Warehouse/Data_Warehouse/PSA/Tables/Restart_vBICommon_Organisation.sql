@@ -1,0 +1,31 @@
+﻿CREATE TABLE [PSA].[Restart_vBICommon_Organisation] (
+    [org_key]                   INT            NOT NULL,
+    [organisation_id]           INT            NULL,
+    [org_contact_details_id]    INT            NULL,
+    [org_primary_contact_id]    INT            NULL,
+    [org_name]                  VARCHAR (150)  NULL,
+    [org_type]                  VARCHAR (500)  NULL,
+    [org_soc]                   VARCHAR (50)   NULL,
+    [org_iconi_notes]           VARCHAR (250)  NULL,
+    [org_version_no]            INT            NULL,
+    [org_notes]                 VARCHAR (4000) NULL,
+    [org_legal_status]          VARCHAR (500)  NULL,
+    [org_no_of_employees]       VARCHAR (500)  NULL,
+    [org_sic]                   VARCHAR (500)  NULL,
+    [org_disability_conf]       VARCHAR (500)  NULL,
+    [org_disability_conf_level] VARCHAR (500)  NULL,
+    [org_status]                VARCHAR (500)  NULL,
+    [org_source]                VARCHAR (500)  NULL,
+    [org_initial_prog]          VARCHAR (100)  NULL,
+    [org_added_by_user_id]      INT            NULL,
+    [org_added_date]            DATETIME       NULL,
+    [org_last_updated_date]     DATETIME       NULL,
+    [Sys_RunID]                 INT            NULL,
+    [Sys_LoadDate]              DATETIME       NULL,
+    [Sys_LoadExpiryDate]        DATETIME       NULL,
+    [Sys_IsCurrent]             BIT            NULL,
+    [Sys_BusKey]                INT            NULL,
+    [Sys_HashKey]               BINARY (16)    NULL
+)
+WITH (CLUSTERED INDEX([Sys_BusKey]), DISTRIBUTION = HASH([Sys_BusKey]));
+

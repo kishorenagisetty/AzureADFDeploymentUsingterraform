@@ -1,0 +1,11 @@
+﻿CREATE VIEW [ADAPT].[SAT_Employee_Adapt_Core] AS SELECT
+CONCAT_WS('|','ADAPT', CAST(REFERENCE AS INT)) AS EmployeeKey,
+E.NAME AS EmployeeName,
+LEFT(E.NAME, CHARINDEX(' ', E.NAME)) AS EmployeeFirstName,
+SUBSTRING(E.NAME, CHARINDEX(' ', E.NAME) + 1, LEN(E.NAME) - CHARINDEX(' ', E.NAME)) AS EmployeeLastName,
+E.EMAIL AS EmployeeEmail,
+E.JOB_TITLE AS JobTitle,
+CONCAT_WS('|','ADAPT', CAST(User_ref AS INT)) AS UserRefKey,
+ValidFrom, ValidTo, IsCurrent
+FROM ADAPT.PROP_EMPLOYEE_GEN E
+WHERE NULLIF(E.Name,'') IS NOT NULL;

@@ -1,0 +1,26 @@
+variable "resource_group_name" {}
+variable "synapse_managed_RG_name" {}
+variable "location" {}
+variable "storage_account_name" {}
+variable "storage_data_lake_gen2_filesystem_name" {}
+variable "synapse_workspace_name" {}
+variable "azure_devops_account_name" {}
+variable "azure_devops_project_name" {}
+variable "azure_devops_branch_name" {}
+variable "azure_devops_repo_name" {}
+variable "synapse_sql_pool_name" {}
+# variable "firewall_allow_ip_address" {}
+variable "start_ip_address_1" {}
+variable "end_ip_address_1" {}
+variable "start_ip_address_2" {}
+variable "end_ip_address_2" {}
+variable "start_ip_address_3" {}
+variable "end_ip_address_3" {}
+variable "start_ip_address_4" {}
+variable "end_ip_address_4"   {}
+variable "start_ip_address_5" {}
+variable "end_ip_address_5"   {}
+variable "sql_username" {}
+variable "sql_password" {}
+variable "synapse_endpoint_subnet_id" {}
+variable "user_object_id" {}

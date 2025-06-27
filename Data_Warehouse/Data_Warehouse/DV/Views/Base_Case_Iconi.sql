@@ -1,0 +1,41 @@
+﻿CREATE VIEW [DV].[Base_Case_Iconi] AS SELECT 
+CONVERT(CHAR(66),C.CaseHash,1) AS CaseHash,
+CC.CaseID,
+CAST(NULL AS NVARCHAR(MAX)) AS CaseDevelopmentStatus,
+CAST(NULL AS NVARCHAR(MAX)) AS CaseModuleStatus,
+CC.CaseStatus,
+CAST(NULL AS NVARCHAR(MAX)) AS PrimaryBenefit,
+CC.LeaveReason,
+CC.WorkReadinessStatus,
+CC.FrequencyOfContact,
+CC.TranOwnerUserId,
+CC.Outcome,
+CC.PackIssued,
+CE.CredReceipt,
+CE.SustainedEarnings,
+CE.ToWork,
+CE.EnglandWales,
+CE.WorkingAge,
+CE.DwpEmployment,
+CE.NotInControlGroupOrPublicSectorComparator,
+CE.EmployabilityExoffender,
+CE.EligibilityConfirmed,
+CE.EmploymentInterests,
+CC.ExitReasonOther,
+CC.OnwardDestination,
+CC.OnwardDestinationOther,
+CC.LeftReason,
+CC.LeftReasonOther,
+CC.LeftStage,
+CC.LeftStageOther,
+CC.DidNotStartReason,
+CC.DidNotStartReasonOther,
+CC.SignedPrivacyNoticeUploaded,
+CC.PrivacyRightsExercised,
+CC.PrivacyRightsDetails,
+CC.DisengagedReason
+FROM DV.HUB_Case C
+LEFT JOIN DV.SAT_Case_Iconi_Core CC ON C.CaseKey = CC.CaseKey
+LEFT JOIN DV.SAT_Case_Iconi_Eligibility CE ON C.CaseKey = CE.CaseKey
+WHERE C.RecordSource = 'ICONI.Engagement';
+GO

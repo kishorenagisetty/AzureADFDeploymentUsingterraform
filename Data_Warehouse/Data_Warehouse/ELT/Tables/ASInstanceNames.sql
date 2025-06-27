@@ -1,0 +1,9 @@
+﻿CREATE TABLE [ELT].[ASInstanceNames] (
+    [ADFName]        VARCHAR (100)  NULL,
+    [ASInstanceName] VARCHAR (32)  NULL,
+    [ASModelName]    VARCHAR (500) NULL
+)
+WITH (CLUSTERED COLUMNSTORE INDEX, DISTRIBUTION = ROUND_ROBIN);
+
+
+GO

@@ -1,0 +1,31 @@
+﻿CREATE VIEW [ICONI].[SAT_Assignment_Iconi_Core] AS SELECT 
+CONCAT_WS('|','ICONI',A.outcome_id)				AS AssignmentKey,
+'OUT' + CAST(A.outcome_id AS VARCHAR)			AS AssignmentID,
+A.out_job_title									AS AssignmentTitle, 
+A.out_contract_type								AS AssignmentStartContractType, 
+A.out_left_date									AS AssignmentLeaveDate, 
+A.out_type										AS AssignmentType, 
+A.out_reason_for_leaving						AS AssignmentLeaveReason, 
+A.out_status									AS AssignmentStatus, 
+A.out_date										AS AssignmentStartDate, 
+A.out_job_type									AS SelfEmployed, 
+A.out_verification_date							AS FailedAssignmentStartDate, 
+A.out_advisor_user_id							AS AssignmentOwningEmployee,
+A.out_verification_date							AS AssignmentStartVerificationDate,
+A.out_duration									AS TempPerm,
+A.out_wage_category								AS WageCategory,
+A.out_hrs_per_week								AS WeeklyHours,
+A.out_follow_up_date							AS AssignmentFollowUpDate,
+A.out_reason_for_leaving_other					AS AssignmentLeavingReasonOther,
+A.out_job_source								AS AssignmentSource,
+A.out_progression_type							AS AssignmentProgressionType,
+A.out_added_date								AS AssignmentAddedDate,
+A.out_added_by_user_id							AS AssignmentAddedBy,
+A.out_last_uppdated_date						AS AssignmentLastUpdatedDate,
+A.out_verification_status						AS AssignmentVerificationStatus,
+A.ValidFrom										AS ValidFrom,
+A.ValidTo										AS ValidTo,
+A.IsCurrent										AS IsCurrent
+FROM ICONI.vBIRestart_Outcome as A;
+GO
+

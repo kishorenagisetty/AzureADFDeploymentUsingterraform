@@ -1,0 +1,19 @@
+﻿CREATE EXTERNAL TABLE [DELTA].[ADAPT_PROP_X_DUPL_CAND] (
+    [BISUNIQUEID] BIGINT NULL,
+    [IMPORT] DECIMAL (16) NULL,
+    [DUPLICATE] DECIMAL (16) NULL,
+    [CANDIDATE] DECIMAL (16) NULL,
+    [ValidFrom] DATETIME2 (0) NULL,
+    [ValidTo] DATETIME2 (0) NULL,
+    [row_sha2] NVARCHAR (MAX) NULL
+)
+    WITH (
+    DATA_SOURCE = [ADLG2_PSA],
+    LOCATION = N'delta/ADAPT/PROP_X_DUPL_CAND/IsCurrent=true',
+    FILE_FORMAT = [parquet_file_format],
+    REJECT_TYPE = VALUE,
+    REJECT_VALUE = 0
+    );
+
+
+

@@ -1,0 +1,11 @@
+﻿CREATE SCHEMA [ADAPT]
+    AUTHORIZATION [dbo];
+
+
+
+
+
+
+
+
+
